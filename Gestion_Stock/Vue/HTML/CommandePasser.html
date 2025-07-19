@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Fractionnement.css">
+    <script src="../Javascript/Fractionnement.js" defer></script>
+    <title>Fractionner un Produit</title>
+</head>
+<body>
+    <div class = "content">
+        <div class="Header">
+            <div class="search-bar">
+                <div class="search-content">
+                    <input type="text" id="searchInput" placeholder="rechercher un Produit que vous voulez fractionner">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="Search">
+                        <path d="M46.599 40.236L36.054 29.691C37.89 26.718 39 23.25 39 19.5 39 8.73 30.27 0 19.5 0S0 8.73 0 19.5 8.73 39 19.5 39c3.75 0 7.218-1.11 10.188-2.943l10.548 10.545a4.501 4.501 0 0 0 6.363-6.366zM19.5 33C12.045 33 6 26.955 6 19.5S12.045 6 19.5 6 33 12.045 33 19.5 26.955 33 19.5 33z" fill="#007cb2" class="color000000 svgShape"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="bodyside">
+            <div class="produit-list" id="productList">
+                <table class="client-table">
+                    <tbody>
+                        <tr class="client-item">
+                            <td>
+                                <img src="../Assets/v.jpeg" alt="photo client" class="client-image">
+                            </td>
+                            <td class="libelle">Nouhone tchinda Rivanold Landry</td>
+                            <td class="date">12-3-2024</td>
+                            <td class="status">En attente</td>
+                            <td><button onclick="window.location.href='../HTML/reception.html'">Receptioner </button></td>
+                        </tr>
+                        <tr class="client-item">
+                            <td>
+                                <img src="../Assets/v.jpeg" alt="photo client" class="client-image">
+                            </td>
+                            <td class="libelle">Mbansie Houssein Ahmed</td>
+                            <td class="date">01-03-2018</td>
+                            <td class="status">En attente</td>
+                            <td><button onclick="window.location.href='../HTML/reception.html'">Receptioner </button></td>
+                        </tr>
+                        <tr class="client-item">
+                            <td>
+                                <img src="../Assets/v.jpeg" alt="photo client" class="client-image">
+                            </td>
+                            <td class="libelle">Mis Tako</td>
+                            <td class="date">08-03-2020</td>
+                            <td class="status">En attente</td>
+                            <td><button onclick="window.location.href='../HTML/reception.html'">Receptioner </button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalClient" class="modal">  
+         <div class="form-container">
+            <span class="close-modal" id="closeunite">&times;</span>
+            <h2>Ajout d'une unité</h2>
+            <form >
+            <label for="intitule">Intitulé de l'unité</label>
+            <input type="text" id="intitule" placeholder="ex: cartons, sachet..." required>
+
+            <div class="button-group">
+                <button type="submit" class="btn btn-ajouter">ajouter</button>
+                <button type="reset" class="btn btn-annuler" >Annuler</button>
+            </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="Fractionner" class="modal">  
+        <div class="form-container">
+            <span class="close-modal" id="closeModalBtn">&times;</span>
+            <h2>Conditionner un produit</h2>
+            <form id="productForm">
+                <label for="unite">Unité</label>
+                <select id="unite" required>
+                    <option value="">-- Choisir une unité --</option>
+                    <option value="cartons">cartons</option>
+                    <option value="sachet">sachet</option>
+                    <option value="paquet">paquet</option>
+                    <option value="morceaux">morceaux</option>
+                </select>
+
+                <label for="qte">Quantité </label>
+                <input type="number" min="1" id="qte" placeholder="quantite pour l'unite choisi" required>
+
+                <label for="prix">Prix unitaire</label>
+                <input type="text" id="prix" placeholder="500 cfa" required>
+
+                <div class="button-group">
+                    <button type="submit" class="btn btn-ajouter">ajouter</button>
+                    <button type="reset" class="btn btn-annuler">Annuler</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

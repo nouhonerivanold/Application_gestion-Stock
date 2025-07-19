@@ -1,0 +1,189 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    justify-content: center;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    margin-bottom: 0.5em;
+    height: fit-content;
+    padding: 0.5em;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 4px 0 white;
+    background-color: #151d4b;
+    border-radius: 10px;
+    position: relative;
+    color: white;
+}
+
+.sidebar .logo{
+    font-weight: 900;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 900;
+    /* letter-spacing: 2px; */
+}
+
+.user-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #020736;
+    gap: 1em;
+    padding: 0.5em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-profile span{
+    font-weight: 800;
+    font-size: 0.8em;
+}
+
+.user-profile .avatar {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.bodyside{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    gap: 0.5em;
+}
+
+.verticalNavBar{
+    background: #151d4b;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 24px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 16em;
+    height: 100%;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.verticalNavBar .bouton {
+    margin-bottom: 8px;
+}
+
+.verticalNavBar .bouton:last-child {
+    margin-bottom: 0;
+}
+
+.verticalNavBar button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    width: 100%;
+    padding: 12px 0;
+    background: #f5f6fa;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #222;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.verticalNavBar button:hover,
+.verticalNavBar button:focus {
+    background: #2d6cdf;
+    color: #fff;
+    outline: none;
+}
+
+button:hover svg .coloricon{
+    fill: #fff;
+}        
+
+.main-content{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5em;
+    border: 1px solid #151d4b;
+}
+
+#mainFrame{
+    height: 100%;
+    width: 100%;
+}
+
+/* ==========dropdown styles============= */
+
+.dropdown {
+    position: relative;
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 180px;
+    top: 20px;
+    width: fit-content;
+    background: #f5f6fa;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border-radius: 0 0 8px 8px;
+    z-index: 10;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5em 0.5em;
+}
+
+.dropdown-content button {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #222;
+    text-align: left;
+    padding-left: 1.5em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;  
+}
+
+.dropdown-content button:hover {
+    background: #2d6cdf;
+    color: #fff;
+}
+
+/* Affichage au hover */
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: flex;
+}
+/* ==========dropdown styles============= */

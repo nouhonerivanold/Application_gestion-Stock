@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    gap: 0.9em;
+}
+
+.passer-commande{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    white-space: nowrap;
+    gap: 0.5em;
+    font-weight: 800;
+}
+
+.bar{
+    width: 100%;
+    height: 0.1em;
+    background-color: #020736;
+}
+
+.bodyside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    background-color: #D9D9D9;
+    border-radius: 0.7em;
+    padding: 0.7em;
+}
+
+.info-client{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.info-client label{
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333333;
+  white-space: nowrap;
+}
+
+.info-client input{
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  color: #555555;
+  background-color: #e8e8e8;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.info-client input::placeholder {
+  color: black;
+  font-style: italic;
+}
+
+.commande{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.button-group{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.button-group button{
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.button-group .btn-ajouter {
+  background-color: #0b1049;
+  color: #ffffff;
+}
+
+.button-group .btn-cancel {
+  background-color: #fff;
+  color: #0b1049;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    gap: 1.3em;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1em;
+    padding: 13px;
+    border-radius: 8px;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333333;
+}
+
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  color: #555555;
+  background-color: #e8e8e8;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #ffffff;
+    width: 22em;
+    gap: 1em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+.form-container input:focus {
+  border: 1px solid #0b1049;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: #f9f9f9;
+}
+
+.left button {
+  width: fit-content;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.left button:hover{
+    background-color: #0b1049;
+    color: #ffffff;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.vertical-line{
+    width: 0.1em;
+    height: 16em;
+    background-color: #020736;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+/* liste des produits du panier */
+
+.list-produit{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-left: 4px solid #0074b7;
+    border-radius: 8px;
+    max-height: 250px;      /* Limite la hauteur */
+    overflow-y: auto; 
+}
+
+.produit-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+    min-width: 400px;
+}
+
+.produit-table th, .produit-table td {
+    padding: 8px 12px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.produit-table th {
+    background-color: #f5f6fa;
+    color: #151d4b;
+    font-weight: bold;
+}
+
+.produit-table td:last-child {
+    text-align: center;
+}
+
+/* .produit-table td:nth-child(3),
+.produit-table td:nth-child(4),
+.produit-table td:nth-child(5) {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+} */
+
+.action-btn {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: background 0.2s;
+}
+
+.action-btn:hover {
+    background: #c0392b;
+}
+/* fin liste des produits du panier */

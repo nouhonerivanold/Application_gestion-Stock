@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;   
+    padding: 1em;
+    gap: 0.7em;
+}
+
+.Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    width: 34em;
+    border-radius: 41px;
+    padding: 0.5em 0.9em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #020736;
+}
+
+.Header button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.5em;
+    gap: 0.5em;
+    color: #222;
+    background-color: #D9D9D9;
+    cursor: pointer;
+}
+
+
+.search-content svg{
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.search-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.search-content input {
+    width: 80%;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #333;
+}
+
+.Header button span{
+    font-weight: bold;
+}
+
+.Header button:hover {
+    background-color: #2d6cdf;
+    color: #fff;
+}
+
+.Header button:hover svg .coloricon {
+    fill: #fff;
+}
+
+
+/* ========== la partir pour gerer la liste des clients========= */
+
+.bodyside{
+    display: flex;
+    width: 100%;
+    height: 29em;
+    background-color: #D9D9D9;
+    border-radius: 0.7em;
+    padding: 1em;
+}
+
+.produit-list {
+    max-height: 400px;
+    width: 100%;
+    overflow-y: auto;
+    border-radius: 10px;
+    padding: 0 8px;
+}
+
+.client-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 7px;
+    font-weight: 500;
+    table-layout: fixed; /* Fixe la largeur des colonnes */
+}
+
+/* Largeur fixe pour chaque colonne (ajuste selon tes besoins) */
+.client-table td:nth-child(1) { width: 60px; }   /* Image */
+.client-table td:nth-child(2) { width: 180px; }  /* Nom */
+.client-table td:nth-child(3) { width: 160px; }  /* Prénom */
+.client-table td:nth-child(4) { width: 170px; }  /* Téléphone */
+.client-table td:nth-child(5) { width: 120px; }  /* Ville */
+.client-table td:nth-child(6) { width: 120px; }  /* Quartier */
+.client-table td:nth-child(7) { width: 110px; }  /* Modifier */
+
+
+/* Pour l'image, pas de points de suspension */
+.client-table td:nth-child(1) {
+    overflow: visible;
+    text-overflow: unset;
+    white-space: normal;
+}
+
+.client-item {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    background-color: #fff;
+}
+
+.client-item td {
+    padding: 12px 16px;
+    vertical-align: middle;
+    border: none;
+    background: transparent;
+    font-size: 1.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;       /* Pour éviter que le texte ne déborde */
+    max-width: 100%;
+}
+
+.client-basic-profile {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.client-image {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #2d6cdf;
+}
+
+.libelle {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+/* ========== fin de la partir pour gerer la liste des clients========= */
+
+/* ============pour gere l'ajout d'un produit============= */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.3);
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form-container {
+  background-color: white;
+  border: 2px solid #003366;
+  border-radius: 8px;
+  padding: 30px 40px;
+  position: relative;
+  width: 320px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+   animation: modalIn 0.2s;
+}
+
+@keyframes modalIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close-modal {
+    position: absolute;
+    right: 1em; top: 1em;
+    font-size: 1.5em;
+    color: #222;
+    cursor: pointer;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0b0b3b;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 15px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="file"],
+.form-container input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #d9d9d9;
+  color: #333;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+select:invalid {
+  color: #888;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.btn {
+  padding: 10px 0;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 48%;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.btn-ajouter {
+  background-color: #1d0c42;
+  color: #fff;
+  text-transform: lowercase;
+}
+
+.btn-annuler {
+  background-color: #d9d9d9;
+  color: #1d0c42;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+
+/* =============fin de gestion de l'ajout d'un produit============= */

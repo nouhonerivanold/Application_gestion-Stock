@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Création de compte</title>
+  <link rel="stylesheet" href="../CSS/Compte.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <h1>INSCRIPTION</h1>
+      <p class="description">Remplissez les informations ci-dessous pour créer votre compte.</p>
+      <form id="registerForm" method="post" action="../../Controleur/creer_compte.php" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+        </div>
+        <div class="form-group">
+          <label for="prenom">Prénom</label>
+          <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+        </div>
+        <div class="form-group">
+          <label for="adresse">Adresse</label>
+          <input type="text" id="adresse" name="adresse" placeholder="Votre adresse" required>
+        </div>
+        <div class="form-group">
+          <label for="telephone">Téléphone</label>
+          <input type="tel" id="telephone" name="telephone" placeholder="Votre numéro de téléphone" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Votre email" required>
+        </div>
+        <div class="form-group">
+          <label for="role">Role</label>
+          <select name="role" id="role">
+            <option value="" disabled selected>Selectionner un role</option>
+            <optgroup label="administrateur">
+              <option value="admin">Administrateur</option>
+            </optgroup>
+            <optgroup label="employe">
+              <option value="magasinier">Magasinier</option>
+              <option value="vendeur">Vendeur</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+          <span class="toggle-password" onclick="togglePasswordVisibility('password', this)">Afficher</span>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirmer mot de passe</label>
+          <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmez le mot de passe" required>
+          <span class="toggle-password" onclick="togglePasswordVisibility('confirm-password', this)">Afficher</span>
+        </div>
+        <div class="form-group">
+          <label for="photo">Photo de profil</label>
+          <input type="file" id="photo" name="photo" accept="image/*" required>
+        </div>
+        
+        <div class="terms">
+          En créant un compte, vous acceptez nos <a href="#">Conditions d'utilisation</a>
+          et notre <a href="#">Politique de confidentialité</a>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Créer le compte</button>
+        <button type="button" class="btn btn-secondary" onclick="window.location.href='/'">Annuler</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const erreur = params.get('error');
+    console.log("erreur récupérée :", erreur);
+
+    function togglePasswordVisibility(inputId, toggleElement) {
+      const passwordInput = document.getElementById(inputId);
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggleElement.textContent = 'Masquer';
+      } else {
+        passwordInput.type = 'password';
+        toggleElement.textContent = 'Afficher';
+      }
+    }
+  </script>
+</body>
+</html>

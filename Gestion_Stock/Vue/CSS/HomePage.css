@@ -1,0 +1,190 @@
+.list-option {
+    display: flex;
+    flex-direction: row;
+    gap: 0.4em;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.option {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding: 0.4em 0.2em 0.5em 0.2em;
+    min-width: 221px;
+    max-width: 230px;
+    flex: 1 1 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.option:hover {
+    box-shadow: 0 8px 32px rgba(45,108,223,0.15);
+    transform: translateY(-4px) scale(1.03);
+}
+
+.header-side h3 {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #151d4b;
+    margin-bottom: 0.7em;
+    text-align: center;
+}
+
+.body-side {
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    margin-bottom: 1em;
+    justify-content: center;
+}
+
+.body-side svg {
+    width: 32px;
+    height: 32px;
+}
+
+.card-value {
+    font-size: 2.1em;
+    font-weight: bold;
+    color: #2d6cdf;
+    margin-left: 0.3em;
+}
+
+.card-button {
+    background: #2d6cdf;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7em 1.5em;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: auto;
+    transition: background 0.2s;
+}
+
+.card-button:hover {
+    background: #151d4b;
+}
+
+/* --------------pour gerer la liste des ventes recentes----------------- */
+
+
+
+.table-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 0.5em;
+    white-space: nowrap;
+}
+
+.horizontal-bar{
+    width: 100%;
+    height: 2px;
+    background-color: #151d4b;
+}
+
+.div-ventes {
+    width: 100%;
+    overflow-x: auto;
+    max-height: 270px;      
+    overflow-y: auto;       
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.sales-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.sales-table th, .sales-table td {
+    padding: 1em 1.2em;
+    text-align: left;
+}
+
+.sales-table thead {
+    background: #2d6cdf;
+    color: #fff;
+}
+
+.sales-table th {
+    font-size: 1.1em;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.sales-table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s;
+}
+
+.sales-table tbody tr:hover {
+    background: #f5f6fa;
+}
+
+.statut {
+    padding: 0.3em 1em;
+    border-radius: 16px;
+    font-size: 0.95em;
+    font-weight: 600;
+}
+
+.statut-totale {
+    background: #d4f8e8;
+    color: #1abc9c;
+}
+
+.statut-partielle {
+    background: #fff6d4;
+    color: #f1c40f;
+}
+
+.statut-attente {
+    background: #ffe0e0;
+    color: #e74c3c;
+}
+
+.btn-action {
+    border: none;
+    border-radius: 6px;
+    padding: 0.4em 1em;
+    margin-right: 0.5em;
+    font-size: 0.98em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-details {
+    background: #2d6cdf;
+    color: #fff;
+}
+
+.btn-details:hover {
+    background: #151d4b;
+}
+
+.btn-supprimer {
+    background: #e74c3c;
+    color: #fff;
+}
+
+.btn-supprimer:hover {
+    background: #c0392b;
+}
+/* 
+@media (max-width: 700px) {
+    .sales-table {
+        min-width: 400px;
+        font-size: 0.95em;
+    }
+} */

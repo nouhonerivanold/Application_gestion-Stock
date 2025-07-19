@@ -1,0 +1,101 @@
+/* Reset et configuration de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  font-family: 'Verdana', sans-serif;
+}
+
+/* Conteneur principal */
+.form-container {
+  width: 360px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Titre */
+.form-container h1 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: #0b1049;
+  margin-bottom: 25px;
+  font-family: 'Verdana', sans-serif;
+}
+
+/* Groupes de champs */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  color: #555555;
+  background-color: #e8e8e8;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.form-group input::placeholder {
+  color: #b3b3b3;
+  font-style: italic;
+}
+
+/* Champ actif avec contour */
+.form-group input:focus {
+  border: 1px solid #0b1049;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: #f9f9f9;
+}
+
+/* Boutons d'action */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.form-actions button {
+  width: 48%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-actions .btn-add {
+  background-color: #0b1049;
+  color: #ffffff;
+}
+
+.form-actions .btn-cancel {
+  background-color: #d9d6e1;
+  color: #0b1049;
+}
+
+.form-actions button:hover {
+  opacity: 0.9;
+}

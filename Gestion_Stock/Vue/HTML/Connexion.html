@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STOCKSYS - Connexion</title>
+  <!-- Lien vers Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Lien vers le fichier CSS -->
+  <link rel="stylesheet" href="../CSS/Connexion.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <form id="form_connexion" action="../../Controleur/connexion.php" method="post">
+        <h1>STOCKSYS</h1>
+        <p>Gerez vos stocks, suivre les ventes,<br>achats et dettes de vos tiers en</p>
+  
+        <input type="email" name="email" placeholder="exemple@gmail.com" required>
+        <input type="password" name="password" placeholder="Mot de passe" required>
+  
+        <div class="forgot-password">Mot de passe oublié ?</div>
+  
+        <button type="submit" class="btn btn-login">Se connecter</button>
+        <button onclick="window.location.href='../../Controleur/connexion.php'" class="btn btn-signup">S’inscrire</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
